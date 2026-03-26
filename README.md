@@ -6,9 +6,7 @@
 
 # render notifier 🐰🐮
 
-yo so you know when you render something in ableton and then you go make food or scroll your phone and totally forget about it??
-
-this plays a sound when it's done so you don't have to keep checking
+this plays a sound when it's done rendering to file so you don't have to keep checking
 
 ## what it does
 
@@ -17,7 +15,6 @@ this plays a sound when it's done so you don't have to keep checking
 - volume slider
 - mute button if you're in a call or whatever
 - remembers your settings
-- it's cute (bunny and cow emojis everywhere)
 
 ```
   ┌─────────────────────────┐
@@ -49,7 +46,7 @@ if your ableton version uses a different property name:
 1. open the device in max 8 (click edit)
 2. find `live.observer is_rendering`
 3. change it to whatever your version uses
-4. cry a little then try again
+4. cry then try again
 
 ```
   (\(\
@@ -57,17 +54,13 @@ if your ableton version uses a different property name:
   o_(")(")
 ```
 
-## made with vibes
+
 
 ```
     (\(\
     ( -.-)
     o_(")(")  🐰 + 🐮
 ```
-
-just a thing i made because i kept forgetting my renders were done lol
-
----
 
 [github repo](https://github.com/testschablone25/ableton-render-notifier)
 
