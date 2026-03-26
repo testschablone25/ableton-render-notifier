@@ -388,6 +388,66 @@
         22
       ],
       "id": "scale"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "pattr enable",
+      "patching_rect": [
+        650,
+        100,
+        60,
+        22
+      ],
+      "id": "pattr_enable"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "pattr volume",
+      "patching_rect": [
+        260,
+        400,
+        60,
+        22
+      ],
+      "id": "pattr_volume"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "pattr mute",
+      "patching_rect": [
+        130,
+        450,
+        60,
+        22
+      ],
+      "id": "pattr_mute"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "pattr filename",
+      "patching_rect": [
+        260,
+        380,
+        60,
+        22
+      ],
+      "id": "pattr_filename"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "pattrstorage",
+      "patching_rect": [
+        700,
+        500,
+        80,
+        22
+      ],
+      "id": "pattrstorage",
+      "parameter": "pattrstorage",
+      "savestate": 1,
+      "clientwindow": 0,
+      "autopopulate": 1,
+      "showeditor": 0
     }
   ],
   "lines": [
@@ -615,6 +675,54 @@
         ],
         "destination": [
           "switch",
+          1
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "pattr_enable",
+          0
+        ],
+        "destination": [
+          "enable_toggle",
+          1
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "pattr_volume",
+          0
+        ],
+        "destination": [
+          "volume_slider",
+          1
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "pattr_mute",
+          0
+        ],
+        "destination": [
+          "mute_toggle",
+          1
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "pattr_filename",
+          0
+        ],
+        "destination": [
+          "filename_display",
           1
         ]
       }
