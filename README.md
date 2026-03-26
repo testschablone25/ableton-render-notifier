@@ -34,7 +34,7 @@ that's it
 
 ```
   (\(\
-  ( -.-)    "ez"
+  ( -.-)    ez
   o_(")(")
 ```
 
@@ -50,7 +50,7 @@ if your ableton version uses a different property name:
 
 ```
   (\(\
-  ( O_O)   "oh no"
+  ( O_O)   oh no
   o_(")(")
 ```
 
