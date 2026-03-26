@@ -491,7 +491,7 @@
     },
     {
       "maxclass": "newobj",
-      "text": "expr pow($f1/100., 2)",
+      "text": "scale 0 100 0. 1. @exponent 2",
       "patching_rect": [
         260,
         420,

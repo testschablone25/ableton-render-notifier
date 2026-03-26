@@ -15,4 +15,10 @@ Plays a cute notification sound when Ableton Live finishes rendering.
 
 ## Troubleshooting
 
-If the rendering indicator doesn't work on your version of Live, the `is_rendering` property may not be available. Try changing the property in the `live.observer` object to a different property that's available in your Live version, or use `live.path` to explicitly set the path before the observer.
+### Notification not triggering
+
+The device uses `live_set.is_rendering` to detect render completion. If this doesn't work on your Ableton Live version:
+1. Open the device in Max 8 (Edit button in Live)
+2. Find the `live.observer is_rendering` object
+3. Try changing `is_rendering` to `rendering` or other property names
+4. Test with a render to verify detection
