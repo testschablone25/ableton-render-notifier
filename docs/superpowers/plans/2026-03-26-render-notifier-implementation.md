@@ -97,7 +97,7 @@ git commit -m "chore: create project structure and base Max patch"
 
 **Files:**
 - Modify: `F:\renderPLUGIN\src\render-notifier.maxpat`
-- Add boxes for `live.path`, `live.observer`, `route`, `sel`, `trigger`.
+- Add boxes for `live.path`, `live.observer`, `sel`, `trigger`.
 
 - [ ] **Step 1: Add live.path and live.observer objects**
 
@@ -119,33 +119,26 @@ Edit `src/render-notifier.maxpat` to include these boxes (coordinates approximat
   },
   {
     "maxclass": "newobj",
-    "text": "route 1",
-    "patching_rect": [50, 110, 60, 22],
-    "id": "route"
-  },
-  {
-    "maxclass": "newobj",
     "text": "sel 0 1",
-    "patching_rect": [50, 140, 60, 22],
+    "patching_rect": [50, 110, 60, 22],
     "id": "sel"
   },
   {
     "maxclass": "newobj",
     "text": "t b b",
-    "patching_rect": [50, 170, 40, 22],
+    "patching_rect": [50, 140, 40, 22],
     "id": "trigger"
   }
 ]
 ```
 
-- [ ] **Step 2: Connect observer to route and sel**
+- [ ] **Step 2: Connect observer to sel**
 
 Add lines array entries (connect boxes):
 
 ```json
 "lines": [
-  { "patchline": ["observer", 0], "destination": ["route", 0] },
-  { "patchline": ["route", 0], "destination": ["sel", 0] },
+  { "patchline": ["observer", 0], "destination": ["sel", 0] },
   { "patchline": ["sel", 0], "destination": ["trigger", 0] }
 ]
 ```
