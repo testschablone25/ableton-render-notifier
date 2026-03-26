@@ -4,40 +4,64 @@
   "boxes": [
     {
       "maxclass": "panel",
-      "patching_rect": [40, 0, 760, 550],
+      "patching_rect": [
+        40,
+        0,
+        760,
+        550
+      ],
       "id": "background",
       "style": {
-        "bgcolor": [248, 242, 255, 255],
-        "bordercolor": [255, 182, 193, 255],
+        "bgcolor": [
+          248,
+          242,
+          255,
+          255
+        ],
+        "bordercolor": [
+          255,
+          182,
+          193,
+          255
+        ],
         "borderthickness": 5,
         "cornerradius": 10
       }
     },
     {
       "maxclass": "comment",
-      "text": "🐰 Render Notifier 🐮",
-      "patching_rect": [50, 10, 200, 30],
+      "text": "\ud83d\udc30 Render Notifier \ud83d\udc2e",
+      "patching_rect": [
+        50,
+        10,
+        200,
+        30
+      ],
       "id": "title",
       "fontsize": 16,
       "fontface": 1,
       "style": {
-        "bgcolor": [248, 242, 255, 255],
-        "textcolor": [93, 93, 129, 255],
-        "bordercolor": [255, 182, 193, 255],
+        "bgcolor": [
+          248,
+          242,
+          255,
+          255
+        ],
+        "textcolor": [
+          93,
+          93,
+          129,
+          255
+        ],
+        "bordercolor": [
+          255,
+          182,
+          193,
+          255
+        ],
         "borderthickness": 5,
         "cornerradius": 10
       }
-    },
-    {
-      "maxclass": "newobj",
-      "text": "live.path live_set",
-      "patching_rect": [
-        50,
-        50,
-        100,
-        22
-      ],
-      "id": "livepath"
     },
     {
       "maxclass": "newobj",
@@ -185,27 +209,62 @@
     {
       "maxclass": "newobj",
       "text": "switch 2",
-      "patching_rect": [450, 80, 50, 22],
+      "patching_rect": [
+        450,
+        80,
+        50,
+        22
+      ],
       "id": "color_switch"
     },
     {
       "maxclass": "message",
       "text": "textcolor 100 200 100 255",
-      "patching_rect": [450, 110, 140, 22],
+      "patching_rect": [
+        450,
+        110,
+        140,
+        22
+      ],
       "id": "color_on",
       "style": {
-        "bgcolor": [248, 242, 255, 255],
-        "textcolor": [93, 93, 129, 255]
+        "bgcolor": [
+          248,
+          242,
+          255,
+          255
+        ],
+        "textcolor": [
+          93,
+          93,
+          129,
+          255
+        ]
       }
     },
     {
       "maxclass": "message",
       "text": "textcolor 93 93 129 255",
-      "patching_rect": [600, 110, 140, 22],
+      "patching_rect": [
+        600,
+        110,
+        140,
+        22
+      ],
       "id": "color_off",
       "style": {
-        "bgcolor": [248, 242, 255, 255],
-        "textcolor": [93, 93, 129, 255]
+        "bgcolor": [
+          248,
+          242,
+          255,
+          255
+        ],
+        "textcolor": [
+          93,
+          93,
+          129,
+          255
+        ]
       }
     },
     {
@@ -432,11 +491,11 @@
     },
     {
       "maxclass": "newobj",
-      "text": "scale 0 100 0 1",
+      "text": "expr pow($f1/100., 2)",
       "patching_rect": [
         260,
         420,
-        80,
+        120,
         22
       ],
       "id": "scale"
@@ -503,18 +562,6 @@
     }
   ],
   "lines": [
-    {
-      "patchline": {
-        "source": [
-          "livepath",
-          0
-        ],
-        "destination": [
-          "observer",
-          0
-        ]
-      }
-    },
     {
       "patchline": {
         "source": [
@@ -835,6 +882,18 @@
         ],
         "destination": [
           "status_text",
+          0
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "pattr_filename",
+          0
+        ],
+        "destination": [
+          "msg_read",
           0
         ]
       }
