@@ -1,26 +1,6 @@
 {
   "fileversion": 1,
-  "appversion": {
-    "major": 8,
-    "minor": 6,
-    "micro": 0,
-    "revision": "5a73b54",
-    "architecture": "x64",
-    "modernui": 1
-  },
-  "classnamespace": "dbox",
-  "rect": [85, 104, 841, 750],
-  "gridonopen": 1,
-  "gridsize": [15.0, 15.0],
-  "gridsnaponopen": 1,
-  "objectsnaponopen": 1,
-  "statusbarvisible": 2,
-  "toolbarvisibletoggle": 0,
-  "boxanimatetime": 200,
-  "imprint": 0,
-  "enablehscroll": 1,
-  "enablevscroll": 1,
-  "devicewidth": 0.0,
+  "appversion": "8.6.0",
   "boxes": [
     {
       "maxclass": "panel",
@@ -922,14 +902,7 @@
   "dependency_cache": [],
   "patcher": {
     "fileversion": 1,
-    "appversion": {
-      "major": 8,
-      "minor": 6,
-      "micro": 0,
-      "revision": "5a73b54",
-      "architecture": "x64",
-      "modernui": 1
-    },
+    "appversion": "8.6.0",
     "rect": [
       0,
       0,
@@ -946,16 +919,5 @@
       15
     ],
     "gridsnap": true
-  },
-  "is_m4l_live_device": 1,
-  "parameter_overrides": {},
-  "saved_attribute_attributes": {},
-  "digest": "",
-  "tags": "",
-  "style": "",
-  "subpatcher_template": "",
-  "assistshowspatchername": 0,
-  "globalpatchername": "",
-  "boxanimatetime": 200,
-  "imprint": 0
+  }
 }
