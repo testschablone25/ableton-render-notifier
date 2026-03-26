@@ -1,0 +1,7 @@
+{
+  "placeholder": true,
+  "description": "This file must be converted to a proper .amxd format using Max 8",
+  "instructions": "Open src/render-notifier.maxpat in Max 8, then File → Save As → Max for Live Device (*.amxd) → Name: Render Notifier.amxd",
+  "source_maxpat": "src/render-notifier.maxpat",
+  "appversion": "8.6.0"
+}
