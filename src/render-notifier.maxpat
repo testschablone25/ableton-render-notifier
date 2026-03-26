@@ -1,8 +1,64 @@
 {
   "fileversion": 1,
   "appversion": "8.6.0",
-  "boxes": [],
-  "lines": [],
+  "boxes": [
+    {
+      "maxclass": "newobj",
+      "text": "live.path live_set",
+      "patching_rect": [50, 50, 100, 22],
+      "id": "livepath"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "live.observer is_rendering",
+      "patching_rect": [50, 80, 120, 22],
+      "id": "observer"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "route 1",
+      "patching_rect": [50, 110, 60, 22],
+      "id": "route"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "sel 0 1",
+      "patching_rect": [50, 140, 60, 22],
+      "id": "sel"
+    },
+    {
+      "maxclass": "newobj",
+      "text": "t b b",
+      "patching_rect": [50, 170, 40, 22],
+      "id": "trigger"
+    },
+    {
+      "maxclass": "comment",
+      "text": "Observer watches live_set.is_rendering\nOutput 1 when rendering starts, 0 when it stops.\nWe only care about the stop (0) -> trigger bang.",
+      "patching_rect": [200, 50, 200, 60],
+      "id": "comment1"
+    }
+  ],
+  "lines": [
+    {
+      "patchline": {
+        "source": ["observer", 0],
+        "destination": ["route", 0]
+      }
+    },
+    {
+      "patchline": {
+        "source": ["route", 0],
+        "destination": ["sel", 0]
+      }
+    },
+    {
+      "patchline": {
+        "source": ["sel", 0],
+        "destination": ["trigger", 0]
+      }
+    }
+  ],
   "dependency_cache": [],
   "patcher": {
     "fileversion": 1,
