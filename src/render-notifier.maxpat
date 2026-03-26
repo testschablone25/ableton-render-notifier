@@ -3,6 +3,32 @@
   "appversion": "8.6.0",
   "boxes": [
     {
+      "maxclass": "panel",
+      "patching_rect": [40, 0, 760, 550],
+      "id": "background",
+      "style": {
+        "bgcolor": [248, 242, 255, 255],
+        "bordercolor": [255, 182, 193, 255],
+        "borderthickness": 5,
+        "cornerradius": 10
+      }
+    },
+    {
+      "maxclass": "comment",
+      "text": "🐰 Render Notifier 🐮",
+      "patching_rect": [50, 10, 200, 30],
+      "id": "title",
+      "fontsize": 16,
+      "fontface": 1,
+      "style": {
+        "bgcolor": [248, 242, 255, 255],
+        "textcolor": [93, 93, 129, 255],
+        "bordercolor": [255, 182, 193, 255],
+        "borderthickness": 5,
+        "cornerradius": 10
+      }
+    },
+    {
       "maxclass": "newobj",
       "text": "live.path live_set",
       "patching_rect": [
@@ -154,6 +180,32 @@
         ],
         "borderthickness": 2,
         "cornerradius": 5
+      }
+    },
+    {
+      "maxclass": "newobj",
+      "text": "switch 2",
+      "patching_rect": [450, 80, 50, 22],
+      "id": "color_switch"
+    },
+    {
+      "maxclass": "message",
+      "text": "textcolor 100 200 100 255",
+      "patching_rect": [450, 110, 140, 22],
+      "id": "color_on",
+      "style": {
+        "bgcolor": [248, 242, 255, 255],
+        "textcolor": [93, 93, 129, 255]
+      }
+    },
+    {
+      "maxclass": "message",
+      "text": "textcolor 93 93 129 255",
+      "patching_rect": [600, 110, 140, 22],
+      "id": "color_off",
+      "style": {
+        "bgcolor": [248, 242, 255, 255],
+        "textcolor": [93, 93, 129, 255]
       }
     },
     {
@@ -724,6 +776,66 @@
         "destination": [
           "filename_display",
           1
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "observer",
+          0
+        ],
+        "destination": [
+          "color_switch",
+          0
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "color_switch",
+          0
+        ],
+        "destination": [
+          "color_on",
+          0
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "color_switch",
+          1
+        ],
+        "destination": [
+          "color_off",
+          0
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "color_on",
+          0
+        ],
+        "destination": [
+          "status_text",
+          0
+        ]
+      }
+    },
+    {
+      "patchline": {
+        "source": [
+          "color_off",
+          0
+        ],
+        "destination": [
+          "status_text",
+          0
         ]
       }
     }
